@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1>Shopping Cart</h1>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        {% for item_key, item in cart.items() %}
+            <tr>
+                <td>{{ item['name'] }}</td>
+                <td>${{ item['price'] }}</td>
+                <td>{{ item['quantity'] }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <th>Total Price:</th>
+            <td colspan="2">${{ total_price }}</td>
+        </tr>
+    </table>
+    <form method="post" action="{{ url_for('clear_cart') }}">
+        <button type="submit">Clear Cart</button>
+    </form>
+</body>
+</html>
