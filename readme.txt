@@ -65,6 +65,3 @@ The project uses SQLite3 as the database to store user accounts and menu data. T
 The application uses basic CSS styles to improve the appearance of the pages. You can further enhance the frontend by adding more styles and customizations.
 
 This application is designed for educational purposes and as a starting point for building more complex web applications. Feel free to expand the features and functionalities according to your requirements.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
